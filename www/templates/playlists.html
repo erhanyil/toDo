@@ -1,0 +1,28 @@
+<ion-view view-title="Yapılacaklar"> 
+	<ion-nav-buttons side="right">
+		<a class="item-icon-right" href="#" ng-click="openModal(3)">
+			<i class="icon ion-compose"></i>
+		</a>
+    </ion-nav-buttons>
+  <ion-content ng-class="backgroundPanda">
+    <ion-refresher pulling-text="Listeyi Yenilemek için Çekiniz" on-refresh="refreshTasks()"
+            refreshing-text="Yükleniyor..." refreshing-icon="ion-loading-b"
+          ></ion-refresher>
+    <ion-list>
+    <!--
+      href="#/app/playlists/{{playlist.id}}">
+    -->
+      <ion-item ng-repeat="playlist in playlists" ng-click="openItem($index)"> 
+          <ion-option-button class="button-positive"
+                             ng-click="openModal(3,playlist.itemID,$index)">
+            Düzenle
+          </ion-option-button>
+          <ion-option-button class="button-assertive" style="padding-left: 18px !important"
+                             ng-click="delete(playlist.itemID,$index)">
+            Sil
+          </ion-option-button>
+        {{playlist.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

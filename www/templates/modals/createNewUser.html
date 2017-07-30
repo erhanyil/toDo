@@ -1,0 +1,29 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Kayıt Ol</h1>
+    <div class="buttons">
+      <button class="button button-clear" style="color: #ccc" ng-click="closeModal()">Kapat</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+<form>
+	<div class="list">
+	 <label class="item item-input" >
+    <span class="input-label">Kullanıcı Adı</span>
+    <input type="text" name="username" id="username" ng-model="data.username">
+  </label>
+   <label class="item item-input" >
+    <span class="input-label">Email</span>
+    <input type="email" name="emailR" id="email" ng-model="data.email">
+  </label>
+   <label class="item item-input" >
+    <span class="input-label">Parola</span>
+    <input type="password" name="password" id="password" ng-model="data.password">
+  </label>
+	  <label class="item">
+	    <button class="button button-block button-balanced" ng-click="doAction(2)">Giriş Yap</button>
+	  </label>
+	</div>
+	</form>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,22 @@
+
+{
+  "name": "My Ionic App",
+  "short_name": "My Ionic App",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon" : "img/pattern.png"
+  },
+  "permissions": [
+    "debugger",
+    "storage"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'"
+  
+}

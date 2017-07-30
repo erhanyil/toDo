@@ -1,0 +1,49 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Yapılacak</h1>
+    <div class="buttons">
+      <button class="button button-clear" style="color: #ccc" ng-click="closeModal()">Kapat</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+<form>
+	<div class="list">
+	<label class="item item-input item-stacked-label">
+    <span class="input-label">Başlık</span>
+    <input type="text" placeholder="" name="title" id="title" ng-model="data.title">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Borç Tutarı</span>
+    <input type="text" placeholder="" name="detail" id="detail" ng-model="data.detail">
+  </label>
+   <label class="item item-input item-select">
+    <div class="input-label">
+      Tür
+    </div><select ng-model="data.type">
+    <option ng-selected="{{type.name == data.type}}"
+            ng-repeat="type in types"
+            value="{{type.name}}">
+      {{type.name}}
+    </option>
+</select>
+  </label>
+  <li class="item item-toggle">
+     Bildirim
+     <label class="toggle toggle-balanced">
+       <input type="checkbox" name="notification" id="notification" ng-model="data.notification">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+  <label class="item item-input" ng-show="data.notification">
+    <span class="input-label">Tarih</span>
+    <input style="text-align: right;" type="date" name="date" id="date" placeholder="dd-MMM-yy" ng-model="data.date">
+  </label>
+	  <label class="item">
+	    <button class="button button-block button-balanced" ng-click="doAction(3,data.itemID)">Tamamla</button>
+	  </label>
+	</div>
+	</form>
+  </ion-content>
+</ion-modal-view>
