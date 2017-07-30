@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name"            : "ng-Todo",
+  "description"     : "Minimal todo app for minimalist",
+  "short_name"      : "ng-Todo",
+  "version"         : "0.1",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon" : "img/pattern.png"
+  },
+  "background": {
+                 "page" : "/js/backgroundService.html" },
+  "permissions": [
+    "debugger",
+    "storage",
+    "notifications",
+    "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [
+    "pattern.png"
+  ]
+} 

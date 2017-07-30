@@ -1,0 +1,33 @@
+/* POPUP Design */
+.popup{
+	border-radius: 10px !important;
+}
+.popup-body{
+	padding: 1px;
+	font-size: 12px;
+}
+.popup-body span{
+	font-style: oblique;
+	font-weight:bold;
+}
+.hello{
+    background: url(../img/pattern.png) no-repeat center;
+    background-size: 350px;
+}
+.zzz{
+    background: url(../img/zzz.jpg) no-repeat center;
+    background-size: 250px;
+}
+.logoutBtn {
+	color: white !important;
+	background: #ef473a !important;
+}
+.loginBtn {
+	color: white !important;
+	background: #33cd5f !important;
+}
+
+body {
+	width: 400px;
+	height: 435px;
+}
